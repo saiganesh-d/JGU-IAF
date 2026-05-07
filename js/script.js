@@ -4,15 +4,17 @@ $(document).ready(function(){
   $(".faculty-carousel").owlCarousel({
     loop: true,
     margin: 20,
-    nav: false,
-    dots: true,
+    nav: true,
+    navText: ["&#10094;", "&#10095;"],
+    dots: false,
     autoplay: true,
     autoplayTimeout: 3000,
     responsive: {
       0: { items: 1 },
       576: { items: 2 },
       768: { items: 3 },
-      992: { items: 4 }
+      992: { items: 4 },
+      1200: { items: 5 }
     }
   });
 
@@ -47,24 +49,6 @@ $(document).ready(function(){
     }
   });
 
-  // Recognitions Carousel
-  $(".recognitions-carousel").owlCarousel({
-    loop: true,
-    margin: 30,
-    nav: false,
-    dots: false,
-    autoplay: true,
-    autoplayTimeout: 2000,
-    slideTransition: 'linear',
-    autoplaySpeed: 2000,
-    autoplayHoverPause: true,
-    responsive: {
-      0: { items: 2 },
-      576: { items: 3 },
-      768: { items: 4 },
-      992: { items: 5 }
-    }
-  });
 
   // Smooth scroll for Enquire buttons
   $('a[href^="#enquire"]').on('click', function(event) {
