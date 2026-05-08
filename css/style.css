@@ -1293,7 +1293,7 @@ footer p { color: #fff; font-size: 14px; margin: 0; }
   .hero-person-img {
     transform: none;
     max-width: 400px;
-    margin: 30px auto -40px auto;
+    margin: 30px auto 0 auto;
     position: relative;
     z-index: 5;
   }
