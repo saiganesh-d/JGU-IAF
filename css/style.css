@@ -1115,9 +1115,10 @@ body {
 }
 
 .rec-badge-center {
-  flex: 0 0 22.5%;
+  flex: 0 0 24%;
   padding: 6px;
-  transform: scale(1.08);
+  transform: scale(1.15);
+  margin: 0 -15px;
   z-index: 10;
 }
 
@@ -1134,9 +1135,11 @@ body {
 .owl-carousel .rec-badge-large, 
 .owl-carousel .rec-badge-center {
   flex: none !important;
-  max-width: 320px !important;
+  max-width: 90% !important;
   width: 100% !important;
   margin: 0 auto !important;
+  transform: none !important;
+  padding: 10px !important;
 }
 
 
@@ -1281,6 +1284,18 @@ footer p { color: #fff; font-size: 14px; margin: 0; }
 @media (max-width: 991px) {
   .hero-inner {
     flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-text-col { order: 1; width: 100%; }
+  .hero-form-col { order: 2; width: 100%; margin-top: 30px; }
+  .hero-image-col { order: 3; width: 100%; display: flex; justify-content: center; }
+  .hero-person-img {
+    transform: none;
+    max-width: 400px;
+    margin: 30px auto -40px auto;
+    position: relative;
+    z-index: 5;
   }
   /* Typography Scaling */
   .hero-title {
