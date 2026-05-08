@@ -133,7 +133,7 @@ body {
 }
 
 .btn-cta {
-  background: #00bcd4;
+  background: #00c2cb !important;
   color: #fff;
   font-weight: 700;
   font-size: 18px;
@@ -739,6 +739,10 @@ body {
   color: #fff;
   font-size: 16px;
   font-weight: 600;
+  border-right: 2px solid #fff;
+}
+.stand-table th:last-child {
+  border-right: none;
 }
 .stand-table td {
   font-size: 14px;
@@ -746,15 +750,15 @@ body {
   color: #444;
 }
 .stand-th-feature {
-  background: #2D005E;
+  background: linear-gradient(90deg, #321074 0%, #3b148c 100%);
   width: 25%;
 }
 .stand-th-jgu {
-  background: linear-gradient(90deg, #2D005E 0%, #3f1a8c 100%);
+  background: linear-gradient(90deg, #3b148c 0%, #4719a6 100%);
   width: 37.5%;
 }
 .stand-th-regular {
-  background: linear-gradient(90deg, #3f1a8c 0%, #4a00e0 100%);
+  background: linear-gradient(90deg, #4719a6 0%, #561bb5 100%);
   width: 37.5%;
 }
 .stand-feature-name {

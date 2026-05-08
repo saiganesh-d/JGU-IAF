@@ -7,8 +7,7 @@ $(document).ready(function(){
     nav: true,
     navText: ["&#10094;", "&#10095;"],
     dots: false,
-    autoplay: true,
-    autoplayTimeout: 3000,
+    autoplay: false,
     responsive: {
       0: { items: 1 },
       576: { items: 2 },
