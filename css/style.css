@@ -1093,7 +1093,7 @@ body {
    CARDS — badges 3,4,5 larger per client (checkmarks)
 ========================================= */
 .rec-badge {
-  flex: 0 0 18.5%;
+  flex: 0 0 17%;
   aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
@@ -1111,23 +1111,23 @@ body {
 }
 
 .rec-badge-large {
-  flex: 0 0 19.5%;
+  flex: 0 0 18%;
 }
 
 .rec-badge-center {
-  flex: 0 0 24%;
+  flex: 0 0 21%;
   padding: 6px;
-  transform: scale(1.15);
-  margin: 0 -15px;
+  transform: scale(1.05);
+  margin: 0;
   z-index: 10;
 }
 
 .rec-badge-center ~ .rec-badge-large {
-  flex: 0 0 19.5%;
+  flex: 0 0 18%;
 }
 
 .rec-badge-center ~ .rec-badge {
-  flex: 0 0 18.5%;
+  flex: 0 0 17%;
 }
 
 /* When inside mobile carousel */
