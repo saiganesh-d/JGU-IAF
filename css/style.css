@@ -30,7 +30,7 @@ body {
 }
 
 .header-logo-img {
-  height: 85px;
+  height: 120px;
   object-fit: contain;
   display: block;
 }
@@ -98,7 +98,7 @@ body {
 }
 
 .hero-title {
-  font-size: 46px;
+  font-size: 50px;
   line-height: 1.15;
   margin-bottom: 14px;
   letter-spacing: -1px;
@@ -116,8 +116,8 @@ body {
 }
 
 .hero-subtext {
-  font-size: 20px;
-  color: #666;
+  font-size: 24px;
+  color: #000;
   line-height: 1.4;
   font-weight: 400;
   margin-bottom: 65px;
@@ -125,7 +125,7 @@ body {
 .hero-subtext strong {
   color: #000;
   font-weight: 800;
-  font-size: 22px;
+  font-size: 26px;
 }
 
 .intro-btns {
@@ -141,9 +141,9 @@ body {
   background: #00c2cb !important;
   color: #fff;
   font-weight: 700;
-  font-size: 18px;
-  padding: 12px 30px;
-  border: none;
+  font-size: 22px;
+  padding: 16px 40px;
+  border: none !important;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -497,29 +497,39 @@ body {
   background: rgba(17, 0, 102, 0.4);
 }
 .fees-title {
-  font-size: 48px;
+  font-size: 56px;
   font-weight: 700;
   text-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 .fees-table {
   width: 100%;
-  max-width: 900px;
-  border-collapse: collapse;
+  max-width: 1100px;
+  border-collapse: separate;
+  border-spacing: 0;
   color: #fff;
-  border: 1px solid rgba(255,255,255,0.4);
+  border: 2px solid rgba(255,255,255,0.8);
+  border-radius: 16px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+  overflow: hidden;
 }
 .fees-table th, .fees-table td {
-  border: 1px solid rgba(255,255,255,0.4);
-  padding: 25px 30px;
-  font-size: 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.8);
+  border-right: 1px solid rgba(255,255,255,0.8);
+  padding: 30px 40px;
+  font-size: 20px;
+}
+.fees-table th:last-child, .fees-table td:last-child {
+  border-right: none;
+}
+.fees-table tr:last-child td {
+  border-bottom: none;
 }
 .fees-table th {
   color: #e6ff00;
   font-weight: 700;
   text-align: left;
-  font-size: 22px;
+  font-size: 26px;
 }
 .fees-table td {
   font-weight: 500;
@@ -540,19 +550,19 @@ body {
 }
 .trusted-title {
   color: #110066;
-  font-size: 40px;
+  font-size: 48px;
   font-weight: 700;
   line-height: 1.3;
   margin-bottom: 20px;
 }
 .trusted-desc {
   color: #333;
-  font-size: 20px;
+  font-size: 24px;
   margin-bottom: 20px;
 }
 .trusted-italic {
   font-style: italic;
-  font-size: 18px;
+  font-size: 22px;
   margin-bottom: 20px;
 }
 .trusted-list {
@@ -565,7 +575,7 @@ body {
   padding-left: 35px;
   margin-bottom: 15px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 22px;
   background: -webkit-linear-gradient(0deg, #110066, #00bcd4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1057,17 +1067,16 @@ body {
   position: relative;
   z-index: 2;
   width: 100%;
-  padding: 0 30px;
+  padding: 0 0px;
 }
 
 .recognitions-badges {
   display: flex;
-  gap: 12px;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1500px;
+  max-width: 1700px;
   margin: 0 auto;
 }
 
@@ -1093,15 +1102,16 @@ body {
    CARDS — badges 3,4,5 larger per client (checkmarks)
 ========================================= */
 .rec-badge {
-  flex: 0 0 17%;
+  flex: 0 0 18%;
   aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 12px;
-  background: linear-gradient(90deg, #6A0DAD 0%, #0d1b73 100%);
-  border-radius: 20px;
+  background: linear-gradient(180deg, #6A0DAD 0%, #0d1b73 100%);
+  border-radius: 40px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  border: 3px solid #fff !important;
 }
 
 .rec-badge img {
@@ -1115,9 +1125,9 @@ body {
 }
 
 .rec-badge-center {
-  flex: 0 0 21%;
+  flex: 0 0 22%;
   padding: 6px;
-  transform: scale(1.05);
+  transform: scale(1.1);
   margin: 0;
   z-index: 10;
 }
@@ -1127,7 +1137,7 @@ body {
 }
 
 .rec-badge-center ~ .rec-badge {
-  flex: 0 0 17%;
+  flex: 0 0 18%;
 }
 
 /* When inside mobile carousel */
