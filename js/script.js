@@ -49,6 +49,30 @@ $(document).ready(function(){
   });
 
 
+  // Recognitions Carousel for mobile
+  const $reconBadge = $('.recognitions-badges');
+  function updateRecognitions() {
+    if(window.innerWidth <= 768) {
+      if(!$reconBadge.hasClass('owl-carousel')) {
+        $reconBadge.addClass('owl-carousel owl-theme').owlCarousel({
+          items: 1, 
+          margin: 20, 
+          loop: true, 
+          nav: false, 
+          dots: true, 
+          autoplay: true,
+          autoplayTimeout: 3500
+        });
+      }
+    } else {
+      if($reconBadge.hasClass('owl-carousel')) {
+        $reconBadge.trigger('destroy.owl.carousel').removeClass('owl-carousel owl-theme');
+      }
+    }
+  }
+  updateRecognitions();
+  $(window).on('resize', updateRecognitions);
+
   // Smooth scroll for Enquire buttons
   $('a[href^="#enquire"]').on('click', function(event) {
     var target = $(this.getAttribute('href'));

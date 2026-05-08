@@ -1119,6 +1119,16 @@ body {
   flex: 0 0 18%;
 }
 
+/* When inside mobile carousel */
+.owl-carousel .rec-badge, 
+.owl-carousel .rec-badge-large, 
+.owl-carousel .rec-badge-center {
+  flex: none !important;
+  max-width: 320px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+
 
 
 /* ================================================
