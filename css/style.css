@@ -439,7 +439,8 @@ body {
   border-radius: 16px;
   padding: 30px 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-  height: 340px;
+  min-height: 340px;   /* was fixed height: long descriptions spilled out of the box */
+  height: 100%;        /* fill the equal-height owl-stage cell so card bottoms align */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -474,6 +475,9 @@ body {
   margin: 0;
 }
 
+.what-gain-carousel .owl-stage {
+  display: flex;   /* make all visible cards equal height so their bottoms line up */
+}
 .what-gain-carousel .owl-nav {
   display: none;
 }
@@ -1289,17 +1293,22 @@ footer {
 footer p { color: #fff; font-size: 14px; margin: 0; }
 
 /* ================================================
-   GLOBAL RESPONSIVENESS (MOBILE & TABLET)
+   HERO — stack on laptops/tablets (≤1399px)
+   The 3-column hero (text + scaled image + form) only has room to
+   sit side-by-side on ≥1400px screens. Below that the container is
+   too narrow, so the no-wrap title and scale(1.45) image overlap
+   their neighbours. Stack the columns and neutralise the scaled
+   image for everything under 1400px. The ≥1400px design is untouched.
 ================================================ */
-@media (max-width: 991px) {
+@media (max-width: 1399.98px) {
   .hero-inner {
-    flex-wrap: wrap;
-    display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
   }
-  .hero-text-col { order: 1; width: 100%; }
-  .hero-form-col { order: 2; width: 100%; margin-top: 30px; }
+  .hero-text-col  { order: 1; width: 100%; }
+  .hero-form-col  { order: 2; width: 100%; margin-top: 30px; }
   .hero-image-col { order: 3; width: 100%; display: flex; justify-content: center; }
+  .hero-title     { white-space: normal; }
   .hero-person-img {
     transform: none;
     max-width: 400px;
@@ -1307,6 +1316,12 @@ footer p { color: #fff; font-size: 14px; margin: 0; }
     position: relative;
     z-index: 5;
   }
+}
+
+/* ================================================
+   GLOBAL RESPONSIVENESS (MOBILE & TABLET)
+================================================ */
+@media (max-width: 991px) {
   /* Typography Scaling */
   .hero-title {
     font-size: 42px !important;
