@@ -90,11 +90,12 @@ body {
   max-width: 650px;
   object-fit: contain;
   display: block;
-  margin-bottom: -220px; 
+  margin-bottom: -220px;
   transform: translateX(30px) scale(1.45);
   transform-origin: bottom center;
   position: relative;
   z-index: 15;
+  pointer-events: none; /* decorative image's scaled box overlaps the enquire form; without this it silently blocks clicks (e.g. the consent checkbox) on transparent PNG areas */
 }
 
 .hero-title {
